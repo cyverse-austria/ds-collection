@@ -216,3 +216,4 @@
       cyverse.ds.irods_user_type:
         type: ds-service
         state: absent
+        description: data-store service
