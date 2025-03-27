@@ -212,9 +212,8 @@
       register: resp
       changed_when: resp.stdout == 'changed'
 
-    ## fatal: [latest-ies.cyverse.at]: FAILED! => {"changed": false, "msg": "CAT_NO_ROWS_FOUND: Nothing was found matching your query"}
-    # - name: Ensure service user type doesn't exist
-    #   cyverse.ds.irods_user_type:
-    #     type: ds-service
-    #     state: absent
-    #     description: not a service
+    - name: Ensure service user type doesn't exist
+      cyverse.ds.irods_user_type:
+        type: ds-service
+        state: absent
+        description: not a service
